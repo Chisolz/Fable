@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+
+<!-- Fable ECS game engine based off scratch blocks and gui -->
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>New Project | Editor</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+
+        <!-- Top bar for project icon, name, settings, ect -->
+        <div class="top">
+            <div class="project">
+                <button id="LogoButton">
+                    <img id="logo" src="Images/Fable Logo.png" width="25" height="25" style="border-radius: 4px;">
+                </button>
+                <input type="text" name="ProjectName" placeholder="Project Name" style="border-radius: 2px;">
+            </div>
+
+            <!-- Buttons for changing engine state -->
+            <div class="EngineState">
+                <button id="StartButton">
+                    <img id="StartImg" src="Images/Start.png">
+                </button>
+
+                <button id="pause_and_play">
+                    <img id="PauseImg" src="Images/Pause.png">
+                </button>
+
+                <button id="StopButton">
+                    <img id="StopImg" src="Images/Stop.png">
+                </button>
+            </div>
+        </div>
+        
+        <!-- Hierarchy, Editor screen, Entity inspector -->
+        <div class="workspace">
+            
+            <div class="hierarchy">
+                <p class="title">Hierarchy</p>
+                <p id="scene-name">New Scene</p>
+                <button id="add-entity" title="Create new entity to scene">+</button>
+                <button id="save-scene" title="Save the current scene">Save</button>
+                <div class="innerside" id="in-hierarchy">
+
+                </div>
+            </div>
+
+            <canvas id="screen" class="screen"></canvas>
+
+            <div class="inspector">
+                <p class="title">Inspector</p>
+                <div class="in-inspector" id="in-inspector">
+                    <button id="add-component">Add Component</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wrapper for console and files panel-->
+        <div class="bottom-wrapper">
+            
+            <div class="tab-panel" id="ConsolePanel">
+                <p>Console Panel</p>
+            </div>
+
+            <div class="tab-panel" id="FileSystemPanel">
+                <div class="folder-bar">
+                    <p id="folder-path">Project</p>
+                    <button id="files-back">X</button>
+                </div>
+
+                <!-- Wrapper for all files, scenes, and folders -->
+                <div id="files">
+
+                </div>
+            </div>
+
+            <div class="bottom">
+                <button id="ConsoleButton">Console</button>
+                <button id="FilesButton">File System</button>
+            </div>
+        
+        </div>
+
+
+        <!-- For right clicking in File System -->
+        <div class="filesContextMenu" id="filesContextMenu">
+            <button>Save Current Scene</button>
+            <button>New Folder</button>
+            <button>New Scene</button>
+            <button>New File</button>
+            <button>Import...</button>
+        </div>
+
+        <div class="add-component-tab" id="add-component-tab">
+
+        </div>
+
+        <!-- Template Containers to be used later -->
+
+        <div class="hierarchyTemplate" id="hierarchyTemplate" style="display: none;">
+            <button class="entity-button">New Entity</button>
+        </div>
+
+        <div class="VFS-Template FolderTemplate" style="display: none;">
+            <img src="Images/Folder-Icon.svg">
+            <p>New Folder</p>
+        </div>
+
+        <div class="VFS-Template FileTemplate" style="display: none;">
+            <img src="Images/File-Icon.svg">
+            <p>New File</p>
+        </div>
+
+        <div class="VFS-Template FolderTemplate" style="display: none;">
+            <img src="Images/Scene-Icon.svg">
+            <p>New Scene</p>
+        </div>
+
+        <!-- MODULE SCRIPTS -->
+        <script type="module" src="dist/Editor-GUI/main.js"></script>
+        <script type="module" src="dist/Editor-GUI/hierarchy.js"></script>
+        <script type="module" src="dist/Editor-GUI/panelAnimation.js"></script>
+
+        <!-- SCRIPTS -->
+        
+        
+    </body>
+</html>
