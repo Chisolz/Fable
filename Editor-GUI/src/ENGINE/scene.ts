@@ -34,11 +34,18 @@ export class Scene {
         });
     }
 
-    draw(contex: CanvasRenderingContext2D) {
+    draw(contex: CanvasRenderingContext2D) : void {
         if (this.entities.length < 0) return;
 
         this.entities.forEach(entity => {
             entity.draw();
         });
+    }
+
+    getEntityById(id: number) : Entity | null {
+        for (let entity of this.entities) {
+            if (entity.id === id) return entity;
+        }
+        return null;
     }
 }

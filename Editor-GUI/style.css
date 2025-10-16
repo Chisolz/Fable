@@ -95,8 +95,14 @@ body {
 
 #scene-name {
     position: absolute;
-    transform: translateY(25px);
+    transform: translateY(37px);
+    text-align: center;
+    color: black;
     text-decoration: underline;
+}
+
+#scene-name::placeholder {
+    color: rgb(26, 26, 26);
 }
 
 /* ---------------------- */

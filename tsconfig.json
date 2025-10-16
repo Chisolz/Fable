@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
     "target": "es6",                    
-    "module": "esnext",               
+    "module": "es2022",      
+    "lib": [
+      "es2017",
+      "DOM",
+      "esnext"
+    ],         
     "strict": true,                     
     "esModuleInterop": true,            
     "forceConsistentCasingInFileNames": true,

@@ -42,7 +42,7 @@
             
             <div class="hierarchy">
                 <p class="title">Hierarchy</p>
-                <p id="scene-name">New Scene</p>
+                <input type="text" id="scene-name" placeholder="New Scene" style="background: none; border: none;"/>
                 <button id="add-entity" title="Create new entity to scene">+</button>
                 <button id="save-scene" title="Save the current scene">Save</button>
                 <div class="innerside" id="in-hierarchy">
@@ -55,8 +55,9 @@
             <div class="inspector">
                 <p class="title">Inspector</p>
                 <div class="in-inspector" id="in-inspector">
-                    <button id="add-component">Add Component</button>
+                    
                 </div>
+                <button id="add-component">Add Component</button>
             </div>
         </div>
 
@@ -107,17 +108,17 @@
         </div>
 
         <div class="VFS-Template FolderTemplate" style="display: none;">
-            <img src="Images/Folder-Icon.svg">
+            <button><img src="Images/Folder-Icon.svg"></button>   
             <p>New Folder</p>
         </div>
 
         <div class="VFS-Template FileTemplate" style="display: none;">
-            <img src="Images/File-Icon.svg">
+            <button><img src="Images/File-Icon.svg"></button>
             <p>New File</p>
         </div>
 
         <div class="VFS-Template FolderTemplate" style="display: none;">
-            <img src="Images/Scene-Icon.svg">
+            <button><img src="Images/Scene-Icon.svg"></button>
             <p>New Scene</p>
         </div>
 

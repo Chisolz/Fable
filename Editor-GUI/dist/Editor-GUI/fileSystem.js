@@ -1,4 +1,5 @@
 "use strict";
+// Buttons designated to file system
 let currentPath = "/src";
 const project = {
     name: "src",

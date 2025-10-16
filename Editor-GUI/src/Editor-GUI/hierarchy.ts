@@ -3,6 +3,7 @@ import { engine } from "./main.js";
 const entityButton = document.getElementById("add-entity");
 const template = document.getElementById("hierarchyTemplate");
 const hierarchy = document.getElementById("in-hierarchy");
+const sceneName = document.getElementById("scene-name");
 
 // Create entity button in hierarchy
 entityButton?.addEventListener("click", () => {
@@ -33,3 +34,8 @@ hierarchy?.addEventListener("click", (event) => {
         document.dispatchEvent(new CustomEvent("update-inspector", {detail: {id: +button.id}}));
     });
 });
+
+sceneName?.addEventListener("change", (e) => {
+    let input = sceneName as HTMLInputElement;
+    if (engine.currentScene) engine.currentScene.sceneName = input?.value;
+})
